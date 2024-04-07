@@ -144,4 +144,28 @@ public class MainCirclesArray {
             System.out.println("Area: " + area);
 
             // Sprawdzenie, czy obiekt jest instancją ColoredCircle i wywołanie metody getColor()
+package geometry;
+
+public class Square extends Rectangle {
+    // Konstruktor
+    public Square(double sideLength) {
+        super(sideLength, sideLength); // Przekazuje długość boku do konstruktora klasy bazowej Rectangle
+    }
+}
+package geometry;
+
+public class Main {
+    public static void main(String[] args) {
+        // Tworzenie obiektu klasy Square
+        Square square = new Square(4.0); // Przekazanie długości boku
+
+        // Wyświetlanie właściwości kwadratu
+        System.out.println("Właściwości kwadratu:");
+        System.out.println("Długość boku: " + square.getLength());
+        System.out.println("Szerokość: " + square.getWidth());
+        System.out.println("Pole: " + square.calculateArea());
+        System.out.println("Obwód: " + square.calculatePerimeter());
+    }
+}
+
            
