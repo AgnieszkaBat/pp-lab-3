@@ -119,3 +119,36 @@ public class Main {
         System.out.println("Area: " + coloredCircle.getArea());
     }
 }
+package geometry;
+
+public class Main {
+    public static void main(String[] args) {
+        // Tworzenie obiektów klasy Point
+        Point center1 = new Point(1, 1);
+        Point center2 = new Point(2, 2);
+        Point center3 = new Point(3, 3);
+        double radius1 = 5.0;
+        double radius2 = 3.0;
+        double radius3 = 4.0;
+        String color = "Red"; // Example color
+
+        // Tworzenie obiektów klasy Circle i ColoredCircle
+        Circle[] circles = {
+            new Circle(center1, radius1),
+            new Circle(center2, radius2),
+            new ColoredCircle(center3, radius3, color)
+        };
+
+        // Iterowanie po tablicy obiektów i wywoływanie metody calculateArea()
+        for (Circle circle : circles) {
+            double area = circle.getArea();
+            System.out.println("Area: " + area);
+
+            // Sprawdzenie, czy obiekt jest instancją ColoredCircle i wywołanie metody getColor()
+            if (circle instanceof ColoredCircle) {
+                String circleColor = ((ColoredCircle) circle).getColor();
+                System.out.println("Color: " + circleColor);
+            }
+        }
+    }
+}
