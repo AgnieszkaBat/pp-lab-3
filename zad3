@@ -64,7 +64,7 @@ public class Circle {
 }
 package geometry;
 
-public class Main {
+public class MainCircle {
     public static void main(String[] args) {
         // Tworzenie obiektu klasy Point
         Point center = new Point(0, 0);
@@ -81,7 +81,6 @@ public class Main {
         System.out.println("Area: " + circle.getArea());
     }
 }
-
 package geometry;
 
 public class ColoredCircle extends Circle {
@@ -100,7 +99,7 @@ public class ColoredCircle extends Circle {
 }
 package geometry;
 
-public class Main {
+public class MainColoredCircle {
     public static void main(String[] args) {
         // Tworzenie obiektu klasy Point
         Point center = new Point(0, 0);
@@ -121,7 +120,7 @@ public class Main {
 }
 package geometry;
 
-public class Main {
+public class MainCirclesArray {
     public static void main(String[] args) {
         // Tworzenie obiektów klasy Point
         Point center1 = new Point(1, 1);
@@ -145,10 +144,4 @@ public class Main {
             System.out.println("Area: " + area);
 
             // Sprawdzenie, czy obiekt jest instancją ColoredCircle i wywołanie metody getColor()
-            if (circle instanceof ColoredCircle) {
-                String circleColor = ((ColoredCircle) circle).getColor();
-                System.out.println("Color: " + circleColor);
-            }
-        }
-    }
-}
+           
