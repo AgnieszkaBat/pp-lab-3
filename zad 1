@@ -1,8 +1,10 @@
+package geometry;
+
 public class Point {
     private double x;
     private double y;
 
-    // Konstruktory
+    // Konstruktor
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
@@ -27,12 +29,56 @@ public class Point {
     public void setY(double y) {
         this.y = y;
     }
+}
+package geometry;
 
-    public static void main(String[] args) {
-        // Tworzenie obiektu klasy Point
-        Point point = new Point(3.5, 2.0);
+public class Circle {
+    private Point center;
+    private double radius;
 
-        // Wyświetlanie współrzędnych punktu
-        System.out.println("Współrzędne punktu: (" + point.getX() + ", " + point.getY() + ")");
+    // Konstruktor
+    public Circle(Point center, double radius) {
+        this.center = center;
+        this.radius = radius;
+    }
+
+    // Metoda zwracająca wartość pola center
+    public Point getCenter() {
+        return center;
+    }
+
+    // Metoda zwracająca wartość pola radius
+    public double getRadius() {
+        return radius;
+    }
+
+    // Metoda obliczająca obwód koła
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    // Metoda zwracająca pole powierzchni koła
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 }
+package geometry;
+
+public class Main {
+    public static void main(String[] args) {
+        // Tworzenie obiektu klasy Point
+        Point center = new Point(0, 0);
+        double radius = 5.0;
+
+        // Tworzenie obiektu klasy Circle
+        Circle circle = new Circle(center, radius);
+
+        // Wyświetlanie właściwości koła
+        System.out.println("Właściwości koła:");
+        System.out.println("Center: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
+        System.out.println("Radius: " + circle.getRadius());
+        System.out.println("Perimeter: " + circle.calculatePerimeter());
+        System.out.println("Area: " + circle.getArea());
+    }
+}
+
